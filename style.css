@@ -1,0 +1,361 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header section */
+header {
+  background: url('images/TheCreationofAdam.jpg') no-repeat center center/cover;
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+/* Overlay on header background*/
+header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+/*text apperance overlay*/
+header h1,
+.hook-line,
+header .category {
+  position: relative;
+  z-index: 1;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-top: 10px;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Dark heme style */
+body[data-theme="dark"] {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body[data-theme="dark"] header {
+  background-color: #1f1f1f;
+}
+
+body[data-theme="dark"] .hover {
+  background-color: #2c2c2c;
+}
+
+body[data-theme="dark"] .main {
+  background-color: #1a1a1a;
+}
+
+body[data-theme="dark"] .cards {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+}
+
+body[data-theme="dark"] .category,
+body[data-theme="dark"] .home-link {
+  background-color: #333;
+  color: #eee;
+}
+
+body[data-theme="dark"] footer {
+  background-color: #1f1f1f;
+  color: #aaa;
+}
+
+body[data-theme="dark"] .modal-content {
+  box-shadow: none;
+}
+/*all text to white when in dark mode*/
+body[data-theme="dark"], 
+body[data-theme="dark"] * {
+  color: #ffffff !important;
+}
+/*dark theme for dropdown filter*/
+body[data-theme="dark"] #filterSelect {
+  background-color: #333;
+  color: #fff;
+  border-color: #555;
+}
+
+body[data-theme="dark"] #filterSelect:hover,
+body[data-theme="dark"] #filterSelect:focus {
+  background-color: #444;
+  border-color: #7e57c2;
+}
+
+/*box styling */
+.box {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  background-color: #e6e6e6;
+  color: #333;
+  padding: 12px 20px;
+  border-radius: 10px;
+  margin: 30px 0 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  line-height: 1.6;
+}
+
+body[data-theme="dark"] .box {
+  background-color: #444;
+  color: #fff;
+}
+
+/* Modal styles for image preview */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+/*modal image*/
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 8px;
+  transition: transform 0.25s ease;
+  cursor: zoom-in;
+}
+
+/*close button for image viewer*/
+.close {
+  position: absolute;
+  top: 30px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+}
+
+/*styling the hook line*/
+.hook-line {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Category navigation in header section */
+header .category {
+  margin-bottom: 15px;
+}
+
+/* Category section */
+.hover {
+  text-align: center;
+  padding: 30px 10px;
+  background-color: #dfdcdc;
+}
+
+.hover h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+/*navigating styling*/
+.nav-right {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  z-index: 2;
+}
+
+/*button style*/
+.category {
+  display: inline-block;
+  background-color: #efefef;
+  border-radius: 25px;
+  margin: 5px;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.category a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.category:hover {
+  background-color: #d1c4e9;
+  transform: scale(1.05);
+}
+
+/*home link button*/
+.home-link {
+  text-decoration: none;
+  background-color: #efefef;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: #333;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.home-link:hover {
+  background-color: #d1c4e9;
+  transform: scale(1.05);
+}
+
+/* Gallery grid using css columns*/
+.main {
+  column-count: 3;
+  column-gap: 20px;
+  padding: 40px;
+  background-color: #fff;
+}
+
+/*card style (individual) */
+.cards {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  padding-bottom: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Images inside cards */
+.cards img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Filter dropdown styling */
+.filter-container {
+  margin: 20px auto;
+  text-align: right;
+  margin-right: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.filter-container label {
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+#filterSelect {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  background-color: #f5f5f5;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+#filterSelect:hover,
+#filterSelect:focus {
+  background-color: #e0e0e0;
+  border-color: #7e57c2;
+  outline: none;
+  cursor: pointer;
+}
+
+
+/* Footer styling */
+footer {
+  background-color: #dfdcdc;
+  color: #555;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 0.95rem;
+  margin-top: 40px;
+  border-top: 1px solid #ddd;
+}
+
+footer .footer-links {
+  margin: 15px 0;
+}
+
+footer .footer-links a {
+  color: #555;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+footer .footer-links a:hover {
+  color: #7e57c2;
+}
+
+footer .copyright {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #646464;
+}
+
+/* Responsive Design for tablets, desktops and phones*/
+@media (max-width: 1024px) {
+  .main {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .main {
+    column-count: 1;
+    padding: 20px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .hook-line {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+}

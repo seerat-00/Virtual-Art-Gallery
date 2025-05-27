@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Virtual Art Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href = "style.css"  rel = "stylesheet"> <!--Linking the external style sheet -->
+</head>
+<body>
+    <!-- Header section for navigation and theme toggle-->
+    <header>
+        <nav class="nav-right">
+            <a href="index.html" class="home-link">Home</a>
+        </nav>
+        <button id="themeToggle" class="theme-toggle">🌙</button><!-- Toggle button for theme like dark or light -->
+        <h1>Virtual Art Gallery</h1>
+        <div class="hook-line">
+            Art has been a key in almost every society and time frame. So, understanding art through the ages and some of the world's most influential art is essential as life's influence continues.
+        </div>
+    </header>
+    <section>
+        <article>
+        <div class="one" >
+            <!-- Section with art categories like Renaissance, Baroque and Romanticism-->
+            <div class="hover">
+                <h2>Art by categories</h2>
+                <div class="category"> <a href="Renaissance.html"> Renaissance </a></div>
+                <div class="category"><a href="Baroque.html"> Baroque </a></div>
+                <div class="category"><a href="Romanticism.html"> Romanticism </a></div>
+            </div>
+            <!--Artwork category with a small context on the category -->
+            <div class="box">
+                Renaissance – a rebirth of classical art and learning, focusing on harmony, realism, and human potential.
+            </div>
+            <div class="main">
+                <!-- main artworks. Has cards for different images and each card represent an individual artwork with the artist name and the year-->
+                <div class="cards">
+                    <img src="images/TheBirthofVenus.jpg" alt="The Birth of Venus">
+                    The Birth of Venus (Sandro Botticelli, 1486)
+                </div>
+                <div class="cards">
+                    <img src="images/TheLastSupper.jpg" alt="The Last Supper">
+                    The Last Supper (Leonardo da Vinci, 1490)
+                </div>
+                <div class="cards">
+                    <img src="images/MonaLisa.jpg" alt="Mona Lisa">
+                    Mona Lisa (Leonardo da Vinci)
+                </div>
+                <div class="cards">
+                    <img src="images/TheSchoolofAthens.jpg" alt="The School of Athens">
+                    The School of Athens (Raphael, 1509–1511)
+                </div>
+                <div class="cards">
+                    <img src="images/TheCreationofAdam.jpg" alt="The Creation of Adam">
+                    The Creation of Adam (Michelangelo, 1912)
+                </div>
+                <div class="cards">
+                    <img src="images/TheBattleofAlexanderatIssus.jpg" alt="The Battle of Alexander at Issus">
+                    The Battle of Alexander at Issus (Albrecht Altdorfer, 1529)
+                </div>
+            </div>
+        </div>
+    </article>
+    <footer>
+    <!--section for navigating to homepage or gallery. -->
+    <div class="footer-links">
+        <a href="index.html">Home</a> |
+        <a href="index.html">Gallery</a> 
+    </div>
+    <!--copyright action-->
+    <div class="copyright">
+        &copy; 2025 Art Gallery. All rights reserved.
+    </div>
+    </footer>
+    </section>
+    <!-- modal view for enlarging the image-->
+     <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+</body>
+<script src="script.js" defer></script> <!--Linking with javascript file-->
+</html> 

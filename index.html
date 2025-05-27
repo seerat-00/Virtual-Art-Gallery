@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Virtual Art Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href = "style.css"  rel = "stylesheet"> <!--Linking the external style sheet -->
+</head>
+<body>
+    <header>
+        <!-- Header section for navigation and theme toggle-->
+        <nav class="nav-right"> 
+            <a href="index.html" class="home-link">Home</a>
+        </nav>
+        <button id="themeToggle" class="theme-toggle">🌙</button> <!-- Toggle button for theme like dark or light -->
+        <h1>Virtual Art Gallery</h1>
+        <div class="hook-line">
+            Art has been a key in almost every society and time frame. So, understanding art through the ages and some of the world's most influential art is essential as life's influence continues.
+        </div>
+    </header>
+    <main>
+        <article>
+        <div class="one" >
+            <!-- Section with art categories like Renaissance, Baroque and Romanticism-->
+            <div class="hover">
+                <h2>Art by categories</h2>
+                <div class="category"> <a href="Renaissance.html"> Renaissance </a></div>
+                <div class="category"><a href="Baroque.html"> Baroque </a></div>
+                <div class="category"><a href="Romanticism.html"> Romanticism </a></div>
+            </div>
+            <!-- Dropdown filter of artworks by years-->
+           <div class="filter-container">
+                <label for="filterSelect">Filter by year:</label>
+                <select id="filterSelect">
+                    <option value="all">All years</option>
+                    <option value="before1900">Before 1900</option>
+                    <option value="1900to1930">1900 - 1930</option>
+                    <option value="after1930">After 1930</option>
+                </select>
+            </div>
+            <div class="main">
+                <!-- main artworks. Has cards for different images and each card represent an individual artwork with the artist name and the year-->
+                <div class="cards" >
+                    <img src="images/TheStarryNights.jpg" alt="Starry Nights">
+                    The Starry Night (Vincent van Gogh, 1889)
+                </div>
+                <div class="cards" data-year="1889">
+                    <img src="images/Irises.jpg" alt="Irises">
+                    Irises (Vincent van Gogh, 1889)
+                </div>
+                <div class="cards" data-year="1888">
+                    <img src="images/TheNightCafé.jpg" alt="The Night Cafe`">
+                    The Night Café (Vincent van Gogh, 1888)
+                </div>
+                <div class="cards" data-year="1908">
+                    <img src="images/TheKiss.jpg" alt="The Kiss">
+                    The Kiss (Gustav Klimt, 1908)
+                </div>
+                <div class="cards" data-year="1931">
+                    <img src="images/ThePersistenceofMemory.jpg" alt="The Persistence of Memory">
+                    The Persistence of Memory (Salvador Dalí, 1931)
+                </div>
+                <div class="cards" data-year="1937">
+                    <img src="images/Gurenica.jpg" alt="Gurenica">
+                    Guernica (Pablo Picasso, 1937)
+                </div>
+                <div class="cards" data-year="1923">
+                    <img src="images/Composition8.jpg" alt="Composition 8">
+                    Composition 8 (Wassily Kandinsky, 1923)
+                </div>
+                <div class="cards"data-year="1912">
+                    <img src="images/NudeDescendingaStaircase,No.2.jpg" alt="Nude Descending a Staircase">
+                    Nude Descending a Staircase, No. 2 (Marcel Duchamp, 1912)
+                </div>
+                <div class="cards" data-year="1897">
+                    <img src="images/TheSleepingGypsy.jpg" alt="The Sleeping Gypsy">
+                    The Sleeping Gypsy (Henri Rousseau, 1897)
+                </div>
+                <div class="cards" data-year="1863">
+                    <img src="images/LeDéjeunersurl’herbe.jpg" alt="Le Dé jeunersurl 'herbe">
+                    Le Déjeuner sur l’herbe (Édouard Manet, 1863)
+                </div>
+                <div class="cards" data-year="1873">
+                    <img src="images/ACottonOfficeinNewOrleans.jpg" alt="A Cotton Office in NewOrleans">
+                    A Cotton Office in New Orleans (Edgar Degas, 1873)
+                </div>
+                <div class="cards" data-year="1897">
+                    <img src="images/LeBoulevarddeMontmartre,MatinéedePrintemps.jpg" alt="Le Boulevardde Montmartre, Matinéede Printemps">
+                    Le Boulevard de Montmartre, Matinée de Printemps (Camille Pissarro, 1897)
+                </div>
+                <div class="cards" data-year="1872">
+                    <img src="images/Impression,Sunrise.jpg" alt="Impression, Sunrise">
+                    Impression, Sunrise (Claude Monet, 1872)
+                </div>
+                <div class="cards" data-year="1886">
+                    <img src="images/ASundayAfternoonontheIslandofLaGrandeJatte.jpg" alt="A Sunday Afternoonon the Island of La Grande Jatte">
+                    A Sunday Afternoon on the Island of La Grande Jatte (Georges Seurat, 1886)
+                </div>
+                <div class="cards" data-year="1881">
+                    <img src="images/LuncheonoftheBoatingParty.jpg" alt="Luncheon of the Boating Party">
+                    Luncheon of the Boating Party (Pierre-Auguste Renoir, 1881)
+                </div>
+                <div class="cards" data-year="1930">
+                    <img src="images/AmericanGothic.jpg" alt="American Gothic">
+                    American Gothic (Grant Wood, 1930)
+                </div>
+                <div class="cards" data-year="1942">
+                    <img src="images/Nighthawks.jpg" alt="Nighthawks">
+                    Nighthawks (Edward Hopper, 1942)
+                </div>
+                <div class="cards" data-year="1917">
+                    <img src="images/TheAvenueintheRain.jpeg" alt="The Avenue in the Rain">
+                    The Avenue in the Rain (Childe Hassam, 1917)
+                </div>
+            </div>
+        </div>
+        </article>
+    </main>
+    <footer> 
+        <!--section for navigating to homepage or gallery. -->
+    <div class="footer-links">
+        <a href="#">Home</a> |
+        <a href="#">Gallery</a> |
+    </div> 
+    <!--copyright action-->
+    <div class="copyright">
+        &copy; 2025 Art Gallery. All rights reserved.
+    </div>
+    </footer>
+    <!-- modal view for enlarging the image-->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+</body>
+<!--Linking with javascript file-->
+<script src="script.js" defer></script>
+</html> 
